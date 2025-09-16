@@ -1,0 +1,70 @@
+---
+
+---
+<footer id="footerNav" class="">
+    <nav class="">
+        <!-- left nav -->
+        <div class="navButton">
+            <svg class="w-4 h-4 mb-1">...</svg>
+            <a href="#" class="">News</a>
+        </div>
+        <div class="navButton">
+            <svg class="w-4 h-4 mb-1">...</svg>
+            <a href="#" class="">Review</a>
+        </div>
+        
+        <!-- Nav Focal point -->
+        <div class="navButton" id="navCenter">
+            <a href="#" class="">Predict</a>
+            <svg class="w-4 h-4 mb-1">...</svg>
+        </div>
+        
+        <!-- right nav -->
+        <div class="navButton">
+            <svg class="w-4 h-4 mb-1">...</svg>
+            <a href="#" class="">Stats</a>
+        </div>
+        <div class="navButton">
+            <svg class="w-4 h-4 mb-1">...</svg>
+            <a href="#" class="">Leaderboards</a>
+        </div>
+    </nav>
+</footer>
+<style>
+    #footerNav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4rem;
+        background-color: white;        
+    }
+
+    #footerNav nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        color: black;
+        position: relative;
+    }
+
+    .navButton {
+        width: 19%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        font-size: 0.75em;
+        
+    }
+
+    #navCenter {
+        background-color: aqua;
+        border-radius: 50%;
+        position: relative;
+        top: -1rem;
+        height: 20vw;
+        width: 20vw;
+    }
+    
+</style>
