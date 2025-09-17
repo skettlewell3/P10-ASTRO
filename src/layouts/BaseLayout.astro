@@ -1,0 +1,18 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import GWNav from "../components/GWNav.astro";
+import NavFooter from "../components/NavFooter.astro";
+---
+
+<BaseHead />
+<body>
+    <header>
+        <slot />
+    </header>
+    <main>
+        <slot />
+    </main>
+    <footer>
+        <NavFooter />
+    </footer>
+</body>
