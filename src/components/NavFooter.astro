@@ -4,29 +4,39 @@
 <footer id="footerNav" class="">
     <nav class="">
         <!-- left nav -->
-        <div class="navButton">
-            <svg class="w-4 h-4 mb-1">...</svg>
-            <a href="#" class="">News</a>
+        <div class="navButtonWrapper" id="news">
+            <div class="navButton">
+                <svg class="w-4 h-4 mb-1">...</svg>
+                <a href="#" class="">News</a>
+            </div>
         </div>
-        <div class="navButton">
-            <svg class="w-4 h-4 mb-1">...</svg>
-            <a href="#" class="">Review</a>
+        <div class="navButtonWrapper" id="review">
+            <div class="navButton">
+                <svg class="w-4 h-4 mb-1">...</svg>
+                <a href="#" class="">Review</a>
+            </div>
         </div>
         
         <!-- Nav Focal point -->
-        <div class="navButton" id="navCenter">
-            <a href="#" class="">Predict</a>
-            <svg class="w-4 h-4 mb-1">...</svg>
+        <div class="navButtonWrapper" id="navCenterWrapper">
+            <div class="navButton active" id="navCenter">
+                <a href="#" class="">Predict</a>
+                <svg class="w-4 h-4 mb-1">...</svg>
+            </div>
         </div>
         
         <!-- right nav -->
-        <div class="navButton">
-            <svg class="w-4 h-4 mb-1">...</svg>
-            <a href="#" class="">Stats</a>
+        <div class="navButtonWrapper" id="stats">
+            <div class="navButton">
+                <svg class="w-4 h-4 mb-1">...</svg>
+                <a href="#" class="">Stats</a>
+            </div>
         </div>
-        <div class="navButton">
-            <svg class="w-4 h-4 mb-1">...</svg>
-            <a href="#" class="">Leaderboards</a>
+        <div class="navButtonWrapper" id="boards">
+            <div class="navButton">
+                <svg class="w-4 h-4 mb-1">...</svg>
+                <a href="#" class="">Boards</a>
+            </div>
         </div>
     </nav>
 </footer>
@@ -41,30 +51,73 @@
     }
 
     #footerNav nav {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.8fr 1fr 1fr;
+        grid-template-rows: 1fr;
         color: black;
         position: relative;
+        background-color: var(--greenbrand);
+    }
+
+    .navButtonWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+        width: 100%;
     }
 
     .navButton {
-        width: 19%;
+        width: 95%;
+        height: 80%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        padding: 0.25em 0;
         text-align: center;
         font-size: 0.75em;
-        
+        color: white;
+        border: 1px solid white;
+        background-color: var(--greenT);        
+    }
+
+    .navButton.active {
+        background-color: white !important;
+        color: var(--greenbrand);
+        font-weight: bold;
+        font-size: 0.9em;
+    }
+
+    #navCenterWrapper {
+        z-index: 100;
+          
     }
 
     #navCenter {
-        background-color: aqua;
+        background-color: var(--bluebrand);
         border-radius: 50%;
-        position: relative;
-        top: -1rem;
-        height: 20vw;
-        width: 20vw;
+        height: 22vw;
+        width: 22vw;              
+    }
+
+    #news {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    #review {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    #stats {
+        grid-column: 4 / 5;
+        grid-row: 1 / 2;
+    }
+
+    #board {
+        grid-column: 5 / 6;
+        grid-row: 1 / 2;
     }
     
 </style>

@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+:root {
+    --bluebrand: rgb(28, 44, 91);
+    --greenbrand: rgb(32, 100, 60);
+    --greenT: rgb(32, 100, 60, 0.5);
+}
