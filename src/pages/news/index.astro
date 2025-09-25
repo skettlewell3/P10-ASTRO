@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import NewsCard from "../../components/NewsCard.astro";
+
+
+const reports = await getCollection('news');
+---
+
+<BaseLayout title="News">
+    <div id="newsHeader">
+        <h1 class="text-3xl font-bold mb-6 text-center text-white">Match Reports</h1>
+    </div>
+    <div class="newsBox" id="newsBox">
+        <div class="card-grid">
+            {reports.map((report) => (
+                <NewsCard
+                  title={report.data.title}
+                  description={report.data.description || ''}
+                  heroImage={report.data.heroImage || ''}
+                  href={`/news/${report.id}`} 
+                />
+            ))}
+        </div>
+    </div>
+</BaseLayout>

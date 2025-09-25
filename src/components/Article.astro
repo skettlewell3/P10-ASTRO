@@ -1,0 +1,33 @@
+---
+const { title, pubDate, heroImage } = Astro.props;
+---
+
+
+
+<div class="report shadow">
+    <div id="reportHeader" class="flex justify-between items-center p-2 border-b">
+        <a href="/news" class="text-blue-600 hover:underline">← Back</a>
+        <span class="text-gray-500">Published: {pubDate}</span>
+    </div>
+    <div class="flex-1 p-4">
+        <h1 class="text-3xl font-bold mb-4">{title}</h1>
+        {heroImage && (
+            <img src={heroImage} alt={title} class="w-full max-h-96 object-cover mb-6 rounded-lg" />
+        )}
+        <div class="prose max-w-none text-justify">
+            <slot />
+        </div>
+    </div>
+</div>
+<style>
+    .report {
+        position: fixed;
+        top: 1vh;
+        left: 2.5vw;
+        width: 95vw;
+        height: 87vh;
+        overflow-y: scroll;
+        background-color: white;
+        border-radius: 4px;
+    }
+</style>

@@ -7,7 +7,7 @@ import NavFooter from "../components/NavFooter.astro";
 <BaseHead />
 <body>
     <header>
-        <slot />
+        <GWNav />
     </header>
     <main>
         <slot />
@@ -16,3 +16,8 @@ import NavFooter from "../components/NavFooter.astro";
         <NavFooter />
     </footer>
 </body>
+<style>
+	body {
+		background-color: var(--bluebrand);
+	}
+</style>

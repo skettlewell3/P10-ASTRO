@@ -5,3 +5,57 @@
     --greenbrand: rgb(32, 100, 60);
     --greenT: rgb(32, 100, 60, 0.5);
 }
+
+@layer components {
+	.card {
+		@apply bg-white rounded-2xl shadow hover:shadow-lg overflow-hidden flex flex-col items-center justify-between p-1 transition;
+	}
+
+	.card-img {
+		@apply w-40 h-30 object-cover rounded-xl mb-0.25;
+	}
+
+	.card-title {
+		@apply font-semibold mb-2 text-center;	
+    }
+
+	.card-desc {
+		@apply text-gray-600 text-sm line-clamp-4 text-center;
+	}
+
+	.card-button {
+		@apply mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 self-start;
+	}
+
+    .card-grid {
+        @apply grid gap-4 grid-cols-2;
+    }
+
+    .newsBox {
+        @apply pt-20 pb-8;
+    }
+}
+
+#newsHeader {
+    position: fixed;
+    top: 8vh;
+    left: 2.5vw;
+    width: 95vw;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: var(--greenbrand);
+
+}
+
+#newsBox {
+    /* border: 1px solid white;
+    border-radius: 4px; */
+    height: 71vh;
+    width: 95vw;
+    overflow-y: scroll;
+    position: fixed;
+    top: 18vh;
+    left: 2.5vw;
+    padding: 0 0.25em;
+}
+

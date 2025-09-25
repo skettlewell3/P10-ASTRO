@@ -1,0 +1,26 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import NavFooter from "../components/NavFooter.astro";
+import Article from "../components/Article.astro";
+
+const { title, pubDate, heroImage, content } = Astro.props;
+---
+
+
+<BaseHead />
+
+<body>
+    <main>
+        <Article title={title} pubDate={pubDate} heroImage={heroImage}>
+            <slot />
+        </Article>
+    </main>
+    <footer>
+        <NavFooter />
+    </footer>
+</body>
+<style>
+    body {
+        background-color: var(--bluebrand);
+    }
+</style>
